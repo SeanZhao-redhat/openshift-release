@@ -12,11 +12,7 @@ ref:
       memory: 100Mi
   grace_period: 15m0s
   documentation: |-
-    Deploy virtual builder for Quay
-  credentials:
-  - namespace: test-credentials
-    name: quay-qe-quaybuilder-secret
-    mount_path: /var/run/quay-qe-quaybuilder-secret
+    Deploy ODF operator and Noobaa
   env:
   - name: QUAYREGISTRY
     documentation: The quay registry name
@@ -24,7 +20,4 @@ ref:
   - name: QUAYNAMESPACE
     documentation: The Quay installed namespace
     default: "quay-enterprise"
-  - name: QUAY_BUILDER_IMAGE
-    documentation: The builder image for Quay Virtual Build
-    default: "brew.registry.redhat.io/rh-osbs/quay-quay-builder-rhel8:v3.9.0-19"
   

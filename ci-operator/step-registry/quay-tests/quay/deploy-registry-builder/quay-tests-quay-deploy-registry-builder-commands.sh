@@ -39,13 +39,6 @@ DEFAULT_TAG_EXPIRATION: 2w
 TAG_EXPIRATION_OPTIONS:
   - 2w
   - 1d
-FEATURE_SUPERUSER_CONFIGDUMP: true
-FEATURE_IMAGE_PULL_STATS: true
-REDIS_FLUSH_INTERVAL_SECONDS: 30
-PULL_METRICS_REDIS:
-  host: quay-quay-redis
-  port: 6379
-  db: 1
 EOF
 
 # Create secret bundle upon env variable TLS, by default it is false.
@@ -53,12 +46,6 @@ EOF
 if [[ "$TLS" == "true" ]]; then
   oc create secret generic -n "${QUAYNAMESPACE}" --from-file config.yaml=./config.yaml config-bundle-secret
 elif [[ "$TLS" = "false" ]]; then
-  
-  #config virtual builder for quay
-  if [[ -e "$SHARED_DIR"/config_builder.yaml ]]; then
-    cat "$SHARED_DIR"/config_builder.yaml >> config.yaml
-  fi
-
   oc create secret generic -n "${QUAYNAMESPACE}" --from-file config.yaml=./config.yaml --from-file ssl.cert="$SHARED_DIR"/ssl.cert \
     --from-file ssl.key="$SHARED_DIR"/ssl.key --from-file extra_ca_cert_build_cluster.crt="$SHARED_DIR"/build_cluster.crt \
     config-bundle-secret
@@ -75,8 +62,6 @@ metadata:
 spec:
   configBundleSecret: config-bundle-secret
   components:
-  - kind: postgres
-    managed: true
   - kind: objectstorage
     managed: true
   - kind: monitoring
