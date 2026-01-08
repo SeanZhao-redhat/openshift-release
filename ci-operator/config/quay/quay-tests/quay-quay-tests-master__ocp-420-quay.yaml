@@ -104,7 +104,7 @@ tests:
       COMPUTE_NODE_REPLICAS: "6"
       COMPUTE_NODE_TYPE: m6a.8xlarge
       ODF_OPERATOR_CHANNEL: stable-4.20
-      QUAY_INDEX_IMAGE_BUILD: quay.io/redhat-user-workloads/quay-eng-tenant/stable-3-16-v4-20@sha256:fd62317d340ef8a3227a65536da5f4e22a5392223157c856084a1e31c9bb0309
+      QUAY_INDEX_IMAGE_BUILD: quay.io/redhat-user-workloads/quay-eng-tenant/stable-3-16-v4-20@sha256:991dde2eb54f55fe57ddbcc633f2a09d73a100eb92391f91f9d08c01c5239cd6
       QUAY_OPERATOR_CHANNEL: stable-3.16
       QUAY_OPERATOR_SOURCE: fbc-operator-catalog
       QUAY_VERSION: "3.16"
