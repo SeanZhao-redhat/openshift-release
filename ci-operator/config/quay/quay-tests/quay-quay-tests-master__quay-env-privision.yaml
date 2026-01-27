@@ -36,10 +36,10 @@ tests:
       COMPUTE_NODE_REPLICAS: "5"
       COMPUTE_NODE_TYPE: m6a.4xlarge
       ODF_OPERATOR_CHANNEL: stable-4.20
-      QUAY_INDEX_IMAGE_BUILD: quay.io/redhat-user-workloads/quay-eng-tenant/stable-3-16-v4-20@sha256:fd62317d340ef8a3227a65536da5f4e22a5392223157c856084a1e31c9bb0309
-      QUAY_OPERATOR_CHANNEL: stable-3.16
+      QUAY_INDEX_IMAGE_BUILD: quay.io/redhat-user-workloads/quay-eng-tenant/stable-3-15-v4-20@sha256:eb0336b251a84d65b73f30f983d12976fdf32faae185fac5e204609f4051b1cb
+      QUAY_OPERATOR_CHANNEL: stable-3.15
       QUAY_OPERATOR_SOURCE: fbc-operator-catalog
-      QUAY_VERSION: "3.16"
+      QUAY_VERSION: "3.15"
     test:
     - ref: quay-tests-enable-quay-catalogsource
     - ref: quay-tests-resource-provisioning-storage-odf
