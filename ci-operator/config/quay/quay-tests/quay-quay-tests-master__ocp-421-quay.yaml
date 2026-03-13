@@ -71,7 +71,7 @@ tests:
       COMPUTE_NODE_REPLICAS: "6"
       COMPUTE_NODE_TYPE: m6a.8xlarge
       ODF_OPERATOR_CHANNEL: stable-4.21
-      QUAY_INDEX_IMAGE_BUILD: quay.io/redhat-user-workloads/quay-eng-tenant/stable-3-17-v4-21@sha256:97e25a851c4625e120fd9ece9721a07e6821c038b2b52863babf24b6a3c990be
+      QUAY_INDEX_IMAGE_BUILD: quay.io/redhat-user-workloads/quay-eng-tenant/stable-3-17-v4-21@sha256:ddee26e98403eb6e6f739c259b4d964daf77c720fa432ca474a9167a56c3edeb
       QUAY_OPERATOR_CHANNEL: stable-3.17
       QUAY_OPERATOR_SOURCE: fbc-operator-catalog
       QUAY_VERSION: "3.17"
@@ -93,8 +93,8 @@ tests:
       COMPUTE_NODE_TYPE: m5.8xlarge
       NEW_UI_TESTING_COVERAGE: builder
       ODF_OPERATOR_CHANNEL: stable-4.21
-      QUAY_BUILDER_IMAGE: quay.io/redhat-user-workloads/quay-eng-tenant/quay-builder-v3-16@sha256:854ff5453e5d2dacfe58018b222c606b88cc08af7bf3ddc82a6c03a735657dfa
-      QUAY_INDEX_IMAGE_BUILD: quay.io/redhat-user-workloads/quay-eng-tenant/quay-builder-v3-17@sha256:2ae4c57a765b6d314f2e336d4df2e2e33343cb7596f72fd70dfc9a3e0a2e13e4
+      QUAY_BUILDER_IMAGE: quay.io/redhat-user-workloads/quay-eng-tenant/quay-builder-v3-17@sha256:2ae4c57a765b6d314f2e336d4df2e2e33343cb7596f72fd70dfc9a3e0a2e13e4
+      QUAY_INDEX_IMAGE_BUILD: quay.io/redhat-user-workloads/quay-eng-tenant/stable-3-17-v4-21@sha256:ddee26e98403eb6e6f739c259b4d964daf77c720fa432ca474a9167a56c3edeb
       QUAY_OLD_UI_DISABLED: "true"
       QUAY_OPERATOR_CHANNEL: stable-3.17
       QUAY_OPERATOR_SOURCE: fbc-operator-catalog
